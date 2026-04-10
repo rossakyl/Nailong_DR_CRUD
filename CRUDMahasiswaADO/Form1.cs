@@ -65,9 +65,50 @@ namespace CRUDMahasiswaADO
                     return;
                 }
 
+                if (cmbJK.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Jenis Kelamin harus dipilih");
+                    cmbJK.Focus();
+                    return;
+                }
+
+                if (txtKodeProdi.Text == "")
+                {
+                    MessageBox.Show("Kode Prodi harus diisi");
+                    txtKodeProdi.Focus();
+                    return;
+                }   
+
+                string query = @"INSERT INTO Mahasiswa (NIM, Nama, JenisKelamin, TanggalLahir, Alamat, KodeProdi) 
+                                 VALUES
+                                 (@NIM, @Nama, @JenisKelamin, @TanggalLahir, @Alamat, @KodeProdi)";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
+                cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
+                cmd.Parameters.AddWithValue("@JK", cmbJK.Text);
+                cmd.Parameters.AddWithValue("@TanggalLahir", dtpTanggalLahir.Value.Date);
+                cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
+                cmd.Parameters.AddWithValue("@KodeProdi", txtKodeProdi.Text);
+                cmd.Parameters.AddWithValue("@TanggalDaftar", DateTime.Now);
+
+                int result = cmd.ExecuteNonQuery();
+
+                if (result > 0) 
+                {
+                    MessageBox.Show("Data berhasil disimpan");
+                    ClearForm();
+                    btnLoad.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Data gagal ditambahkan");
+                }
+
                 // (lanjutan biasanya insert ke database)
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 MessageBox.Show("Terjadi kesalahan: " + ex.Message);
             }
