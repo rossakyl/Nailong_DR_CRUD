@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Menambahkan Namespace yang diperlukan
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
