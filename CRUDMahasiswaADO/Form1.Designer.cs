@@ -32,7 +32,7 @@
             this.txtNIM = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNama = new System.Windows.Forms.TextBox();
             this.cmbJK = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -84,13 +84,13 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Jenis Kelamin";
             // 
-            // textBox2
+            // txtNama
             // 
-            this.textBox2.Location = new System.Drawing.Point(120, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtNama.Location = new System.Drawing.Point(120, 74);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(100, 22);
+            this.txtNama.TabIndex = 4;
+            this.txtNama.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // cmbJK
             // 
@@ -232,7 +232,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbJK);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNIM);
@@ -252,7 +252,7 @@
         private System.Windows.Forms.TextBox txtNIM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNama;
         private System.Windows.Forms.ComboBox cmbJK;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
