@@ -64,6 +64,7 @@
             this.txtNIM.Name = "txtNIM";
             this.txtNIM.Size = new System.Drawing.Size(100, 22);
             this.txtNIM.TabIndex = 1;
+            this.txtNIM.TextChanged += new System.EventHandler(this.txtNIM_TextChanged);
             // 
             // label2
             // 
@@ -89,6 +90,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // cmbJK
             // 
@@ -97,6 +99,7 @@
             this.cmbJK.Name = "cmbJK";
             this.cmbJK.Size = new System.Drawing.Size(121, 24);
             this.cmbJK.TabIndex = 6;
+            this.cmbJK.SelectedIndexChanged += new System.EventHandler(this.cmbJK_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -122,6 +125,7 @@
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(100, 22);
             this.txtAlamat.TabIndex = 9;
+            this.txtAlamat.TextChanged += new System.EventHandler(this.txtAlamat_TextChanged);
             // 
             // label6
             // 
@@ -131,6 +135,7 @@
             this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "kode Prodi";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtKodeProdi
             // 
@@ -158,6 +163,7 @@
             this.btnLoad.TabIndex = 14;
             this.btnLoad.Text = "Menampilkan Data";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // dtpTanggalLahir
             // 
@@ -165,6 +171,7 @@
             this.dtpTanggalLahir.Name = "dtpTanggalLahir";
             this.dtpTanggalLahir.Size = new System.Drawing.Size(200, 22);
             this.dtpTanggalLahir.TabIndex = 15;
+            this.dtpTanggalLahir.ValueChanged += new System.EventHandler(this.dtpTanggalLahir_ValueChanged);
             // 
             // dataGridView1
             // 
@@ -175,6 +182,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(737, 150);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnInsert
             // 
@@ -194,15 +202,17 @@
             this.btnUpdate.TabIndex = 18;
             this.btnUpdate.Text = "Mengubah Data";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(445, 201);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(170, 23);
+            this.btnDelete.Size = new System.Drawing.Size(170, 30);
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Menghapus Data";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
